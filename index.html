@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a Cenar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invitación a Cenar</h1>
+        <p>Alicia, Alias Sñrita Recoleta,</p>
+        <p>Entiendo que no hayas querido hablar ultimamente y respete eso. Sin embargo me gustaria invitarte a cenar, sin ninguna presion ni expectativas. Una noche de risas, buena comida y grata compañia. Como buenos amigos q siempre fuimos. Valoro la conexion que tenemos y me encantaria pasar un rato agradable con vos.</p>
+        <p>¿Aceptas mi invitación?</p>
+        <a href="confirmacion.html" class="button yes">Sí</a>
+        <div class="button no" id="noButton">No</div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        noButton.addEventListener('mouseover', function () {
+            const randomX = Math.floor(Math.random() * (window.innerWidth - noButton.offsetWidth));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - noButton.offsetHeight));
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        });
+    </script>
+</body>
+</html>
