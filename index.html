@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Proposal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Que onda Sol, que te parece una merienda?</h1>
+        <p>No es una pregunta, es una propuesta.</p>
+        <p>¿Vamos?</p>
+        <a href="confirmacion.html" class="button yes">Sí</a>
+        <div class="button no" id="noButton">No</div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        noButton.addEventListener('mouseover', function () {
+            const randomX = Math.floor(Math.random() * (window.innerWidth - noButton.offsetWidth));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - noButton.offsetHeight));
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        });
+    </script>
+</body>
+</html>
